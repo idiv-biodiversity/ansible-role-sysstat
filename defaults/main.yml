@@ -1,0 +1,13 @@
+---
+
+sysstat_sar_service: no
+
+sysstat_history_days: 28
+
+sysstat_compress_after_days: 31
+
+sysstat_sadc_options: '-S DISK'
+
+sysstat_compression_program: bzip2
+
+...

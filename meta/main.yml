@@ -1,0 +1,23 @@
+---
+
+dependencies: []
+
+galaxy_info:
+
+  author: Christian Krause
+  description: 'install and set up sysstat'
+  company: German Centre for Integrative Biodiversity Research (iDiv)
+  license: MIT
+  min_ansible_version: 2.0
+
+  platforms:
+    - name: EL
+      versions:
+        - 6
+        - 7
+
+  galaxy_tags:
+    - monitoring
+    - sysstat
+
+...
