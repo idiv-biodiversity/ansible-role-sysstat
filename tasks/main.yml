@@ -2,7 +2,7 @@
 
 - name: install sysstat
   yum:
-    pkg: sysstat
+    name: sysstat
 
 - name: configure sysstat
   template:
