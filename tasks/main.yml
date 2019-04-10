@@ -4,6 +4,16 @@
   yum:
     name: sysstat
 
+- name: get installed version
+  yum:
+    list: sysstat
+  register: sysstat_installed_version_getter
+
+- name: set installed version fact
+  set_fact:
+    sysstat_installed_version: >-
+      {{ sysstat_installed_version_getter.results.0.version }}
+
 - name: configure sysstat
   template:
     src: 'sysstat-conf-{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version }}.j2'
