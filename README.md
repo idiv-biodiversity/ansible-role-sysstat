@@ -114,7 +114,7 @@ Author Information
 This role was created in 2018 by [Christian Krause][author] aka [wookietreiber at GitHub][wookietreiber], HPC cluster systems administrator at the [German Centre for Integrative Biodiversity Research (iDiv)][idiv].
 
 
-[author]: https://www.idiv.de/groups_and_people/employees/details/eshow/krause-christian.html
+[author]: https://www.idiv.de/en/groups_and_people/employees/details/61.html
 [idiv]: https://www.idiv.de/
 [wookietreiber]: https://github.com/wookietreiber
 [sysstat]: http://sebastien.godard.pagesperso-orange.fr/
