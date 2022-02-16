@@ -1,0 +1,37 @@
+# sysstat-{{ sysstat_installed_version }} configuration file.
+
+# How long to keep log files (in days).
+# If value is greater than 28, then log files are kept in
+# multiple directories, one for each month.
+HISTORY={{ sysstat_history_days }}
+
+# Compress (using gzip or bzip2) sa and sar files older than (in days):
+COMPRESSAFTER={{ sysstat_compress_after_days }}
+
+# Parameters for the system activity data collector (see sadc manual page)
+# which are used for the generation of log files.
+SADC_OPTIONS="{{ sysstat_sadc_options }}"
+
+# Directory where sa and sar files are saved. The directory must exist.
+SA_DIR="{{ sysstat_sa_dir }}"
+
+# Compression program to use.
+ZIP="{{ sysstat_compression_program }}"
+
+# By default sa2 script generates yesterday's summary, since the cron job
+# usually runs right after midnight. If you want sa2 to generate the summary
+# of the same day (for example when cron job runs at 23:53) set this variable.
+{% if sysstat_sa2_generate_yesterday is defined %}
+YESTERDAY="{{ sysstat_sa2_generate_yesterday }}"
+{% else %}
+#YESTERDAY=no
+{% endif %}
+
+# By default sa2 script generates reports files (the so called sarDD files).
+# Set this variable to false to disable reports generation.
+{% if sysstat_sa2_generate_reports is defined %}
+REPORTS="{{ sysstat_sa2_generate_reports }}"
+{% else %}
+#REPORTS=false
+{% endif %}
+
