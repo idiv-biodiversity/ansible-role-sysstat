@@ -42,7 +42,13 @@ sysstat_compress_after_days: 31
 
 sysstat_sadc_options: '-S DISK'
 
+sysstat_sa_dir: /var/log/sa
+
 sysstat_compression_program: bzip2
+
+sysstat_sa2_generate_yesterday: no
+
+sysstat_sa2_generate_reports: false
 ```
 
 Dependencies
