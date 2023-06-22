@@ -1,0 +1,7 @@
+---
+
+sysstat_sadc_options: ' -S DISK'
+
+sysstat_compression_program: xz
+
+...

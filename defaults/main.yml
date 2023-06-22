@@ -2,6 +2,8 @@
 
 sysstat_sar_service: no
 
+sysstat_sar_service_start: started
+
 sysstat_history_days: 28
 
 sysstat_compress_after_days: 31

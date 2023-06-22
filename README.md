@@ -36,6 +36,8 @@ sysstat_sar_service: no
 These variables control the collector:
 
 ```yml
+sysstat_files_umask: 0027
+
 sysstat_history_days: 28
 
 sysstat_compress_after_days: 31
@@ -45,6 +47,8 @@ sysstat_sadc_options: '-S DISK'
 sysstat_sa_dir: /var/log/sa
 
 sysstat_compression_program: bzip2
+
+sysstat_sa2_delay_range: 10
 
 sysstat_sa2_generate_yesterday: no
 
