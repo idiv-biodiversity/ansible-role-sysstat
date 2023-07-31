@@ -3,6 +3,8 @@
 dependencies: []
 
 galaxy_info:
+  role_name: sysstat
+  namespace: idiv_biodiversity
 
   author: Christian Krause
   description: 'install and set up sysstat'
