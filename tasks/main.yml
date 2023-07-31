@@ -1,21 +1,21 @@
 ---
 
 - name: install sysstat
-  yum:
+  ansible.builtin.yum:
     name: sysstat
 
 - name: get installed version
-  yum:
+  ansible.builtin.yum:
     list: sysstat
   register: sysstat_installed_version_getter
 
 - name: set installed version fact
-  set_fact:
+  ansible.builtin.set_fact:
     sysstat_installed_version: >-
       {{ sysstat_installed_version_getter.results.0.version }}
 
 - name: configure sysstat
-  template:
+  ansible.builtin.template:
     src: 'sysstat-conf-{{ ansible_os_family | lower }}-{{ ansible_distribution_major_version }}.j2'
     dest: '/etc/sysconfig/sysstat'
     owner: root
@@ -23,7 +23,7 @@
     mode: 0644
 
 - name: configure sysstat cron
-  template:
+  ansible.builtin.template:
     src: 'sysstat-cron.j2'
     dest: '/etc/cron.d/sysstat'
     owner: root
@@ -31,7 +31,7 @@
     mode: 0600
 
 - name: set sysstat service status
-  service:
+  ansible.builtin.service:
     name: sysstat
     enabled: '{{ sysstat_sar_service }}'
   tags:
